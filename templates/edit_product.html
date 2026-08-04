@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Edit Product</title>
+
+
+    <style>
+
+        body {
+
+            font-family: Arial, sans-serif;
+
+            background: #f5f5f5;
+
+            padding: 30px;
+
+        }
+
+
+        .container {
+
+            max-width: 600px;
+
+            margin: auto;
+
+            background: white;
+
+            padding: 30px;
+
+            border-radius: 12px;
+
+        }
+
+
+        input,
+        textarea,
+        select {
+
+            width: 100%;
+
+            padding: 12px;
+
+            margin-bottom: 15px;
+
+            box-sizing: border-box;
+
+        }
+
+
+        button {
+
+            width: 100%;
+
+            padding: 13px;
+
+            background: #111;
+
+            color: white;
+
+            border: none;
+
+            cursor: pointer;
+
+        }
+
+
+        .back {
+
+            display: inline-block;
+
+            margin-bottom: 20px;
+
+            text-decoration: none;
+
+            color: #111;
+
+        }
+
+
+        img {
+
+            width: 200px;
+
+            height: 150px;
+
+            object-fit: cover;
+
+            margin-bottom: 20px;
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<div class="container">
+
+
+<a
+    href="/admin"
+    class="back"
+>
+    ← Back to Dashboard
+</a>
+
+
+<h1>Edit Product</h1>
+
+
+{% if product["image"] %}
+
+<img
+    src="{{ url_for(
+        'static',
+        filename='images/' + product['image']
+    ) }}"
+>
+
+{% endif %}
+
+
+<form
+    method="POST"
+    enctype="multipart/form-data"
+>
+
+
+<label>
+    Product Name
+</label>
+
+<input
+    type="text"
+    name="name"
+    value="{{ product['name'] }}"
+    required
+>
+
+
+<label>
+    Description
+</label>
+
+<textarea
+    name="description"
+    rows="6"
+>{{ product['description'] }}</textarea>
+
+
+<label>
+    Price
+</label>
+
+<input
+    type="text"
+    name="price"
+    value="{{ product['price'] }}"
+>
+
+
+<label>
+    Category
+</label>
+
+<select
+    name="category"
+>
+
+<option
+    value="panel"
+    {% if product['category'] == 'panel' %}
+    selected
+    {% endif %}
+>
+    Solar Panel
+</option>
+
+
+<option
+    value="inverter"
+    {% if product['category'] == 'inverter' %}
+    selected
+    {% endif %}
+>
+    Inverter / Power Station
+</option>
+
+
+<option
+    value="battery"
+    {% if product['category'] == 'battery' %}
+    selected
+    {% endif %}
+>
+    Battery / Solar Tank
+</option>
+
+
+<option
+    value="fan"
+    {% if product['category'] == 'fan' %}
+    selected
+    {% endif %}
+>
+    Solar Fan
+</option>
+
+
+<option
+    value="other"
+    {% if product['category'] == 'other' %}
+    selected
+    {% endif %}
+>
+    Other
+</option>
+
+</select>
+
+
+<label>
+    Replace Image
+</label>
+
+<input
+    type="file"
+    name="image"
+    accept=".jpg,.jpeg,.png,.webp"
+>
+
+
+<button
+    type="submit"
+>
+    Save Changes
+</button>
+
+
+</form>
+
+
+</div>
+
+
+</body>
+
+</html>
