@@ -1,0 +1,3244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Dura Strength Nigeria | Go Solar, Save Cost</title>
+
+<meta name="description" content="Dura Strength Nigeria - Reliable solar energy solutions for homes and businesses. Go solar, save cost.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<style>
+
+/* =====================================================
+   RESET & GLOBAL
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --orange: #f58220;
+    --orange-light: #ff9d4d;
+    --blue: #1268d9;
+    --dark: #0b0d10;
+    --dark-2: #15181d;
+    --dark-3: #20242a;
+    --white: #ffffff;
+    --light: #f7f8fa;
+    --gray: #6b7280;
+    --border: #e5e7eb;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    color: var(--dark);
+    background: var(--white);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button,
+input,
+textarea,
+select {
+    font-family: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+section {
+    overflow: hidden;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 14px 24px;
+    border-radius: 8px;
+    font-weight: 700;
+    border: none;
+    transition: 0.3s ease;
+}
+
+.btn-primary {
+    background: var(--orange);
+    color: white;
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(245, 130, 32, 0.3);
+}
+
+.btn-outline {
+    border: 1px solid rgba(255,255,255,0.5);
+    color: white;
+    background: transparent;
+}
+
+.btn-outline:hover {
+    background: white;
+    color: var(--dark);
+}
+
+.section-heading {
+    max-width: 700px;
+    margin: 0 auto 55px;
+    text-align: center;
+}
+
+.section-heading span {
+    color: var(--orange);
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 12px;
+}
+
+.section-heading h2 {
+    font-size: clamp(32px, 5vw, 48px);
+    line-height: 1.1;
+    margin: 12px 0 15px;
+}
+
+.section-heading p {
+    color: var(--gray);
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background: rgba(255,255,255,0.94);
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+
+.navbar {
+    height: 78px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-circle {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--blue), var(--orange));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 20px;
+}
+
+.logo-name {
+    font-weight: 900;
+    font-size: 17px;
+    letter-spacing: -0.5px;
+}
+
+.logo-name small {
+    display: block;
+    font-size: 9px;
+    letter-spacing: 3px;
+    color: var(--gray);
+    font-weight: 600;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    list-style: none;
+}
+
+.nav-links a {
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--orange);
+}
+
+.nav-cta {
+    background: var(--orange);
+    color: white !important;
+    padding: 11px 18px;
+    border-radius: 7px;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero {
+    min-height: 100vh;
+    padding-top: 78px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    color: white;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(5,8,12,0.94),
+            rgba(5,8,12,0.72),
+            rgba(5,8,12,0.30)
+        ),
+        url("https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=2000&q=85")
+        center/cover;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    width: 450px;
+    height: 450px;
+    background: var(--orange);
+    opacity: 0.08;
+    border-radius: 50%;
+    right: -150px;
+    top: 20%;
+    filter: blur(20px);
+}
+
+.hero-content {
+    max-width: 720px;
+    position: relative;
+    z-index: 2;
+    animation: fadeUp 1s ease;
+}
+
+.hero-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 15px;
+    border-radius: 30px;
+    background: rgba(245,130,32,0.13);
+    border: 1px solid rgba(245,130,32,0.5);
+    color: #ffb673;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 22px;
+}
+
+.hero h1 {
+    font-size: clamp(48px, 8vw, 82px);
+    line-height: 0.98;
+    letter-spacing: -4px;
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    color: var(--orange);
+}
+
+.hero p {
+    max-width: 600px;
+    color: #d4d7dc;
+    font-size: 18px;
+    margin-bottom: 32px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.hero-stats {
+    display: flex;
+    gap: 45px;
+    margin-top: 55px;
+}
+
+.stat h3 {
+    font-size: 28px;
+}
+
+.stat p {
+    font-size: 12px;
+    color: #aeb3bb;
+    margin: 0;
+}
+
+
+/* =====================================================
+   TRUST STRIP
+===================================================== */
+
+.trust-strip {
+    background: var(--dark);
+    color: white;
+    padding: 28px 0;
+}
+
+.trust-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.trust-item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.trust-item i {
+    color: var(--orange);
+    font-size: 25px;
+}
+
+.trust-item h4 {
+    font-size: 13px;
+}
+
+.trust-item p {
+    font-size: 11px;
+    color: #858b94;
+}
+
+
+/* =====================================================
+   PRODUCTS
+===================================================== */
+
+.products {
+    padding: 110px 0;
+    background: var(--light);
+}
+
+.filter-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 40px;
+}
+
+.filter-btn {
+    padding: 10px 18px;
+    border: 1px solid var(--border);
+    background: white;
+    border-radius: 30px;
+    font-size: 13px;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background: var(--orange);
+    color: white;
+    border-color: var(--orange);
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.product-card {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    overflow: hidden;
+    transition: 0.4s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+}
+
+.product-img {
+    height: 250px;
+    position: relative;
+    overflow: hidden;
+}
+
+.product-img img {
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s;
+}
+
+.product-card:hover .product-img img {
+    transform: scale(1.07);
+}
+
+.product-badge {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: var(--orange);
+    color: white;
+    padding: 6px 10px;
+    font-size: 10px;
+    font-weight: 800;
+    border-radius: 5px;
+    text-transform: uppercase;
+}
+
+.product-content {
+    padding: 24px;
+}
+
+.product-category {
+    color: var(--orange);
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 10px;
+    letter-spacing: 1px;
+}
+
+.product-content h3 {
+    font-size: 19px;
+    margin: 7px 0;
+}
+
+.product-content p {
+    font-size: 13px;
+    color: var(--gray);
+    margin-bottom: 20px;
+}
+
+.product-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.view-product {
+    border: none;
+    background: none;
+    color: var(--orange);
+    font-weight: 800;
+    font-size: 13px;
+}
+
+
+/* =====================================================
+   FEATURED PRODUCT
+===================================================== */
+
+.featured {
+    padding: 110px 0;
+}
+
+.featured-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-radius: 25px;
+    overflow: hidden;
+    background: var(--dark);
+    color: white;
+}
+
+.featured-image {
+    min-height: 520px;
+    background:
+        linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1)),
+        url("https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?auto=format&fit=crop&w=1200&q=85")
+        center/cover;
+}
+
+.featured-content {
+    padding: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.featured-content span {
+    color: var(--orange);
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 12px;
+}
+
+.featured-content h2 {
+    font-size: clamp(34px, 5vw, 50px);
+    line-height: 1.05;
+    margin: 15px 0;
+}
+
+.featured-content p {
+    color: #aeb3bb;
+    margin-bottom: 25px;
+}
+
+.feature-list {
+    list-style: none;
+    margin-bottom: 30px;
+}
+
+.feature-list li {
+    margin: 11px 0;
+    font-size: 14px;
+}
+
+.feature-list i {
+    color: var(--orange);
+    margin-right: 8px;
+}
+
+
+/* =====================================================
+   SERVICES
+===================================================== */
+
+.services {
+    padding: 110px 0;
+    background: var(--light);
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.service-card {
+    background: white;
+    padding: 38px 30px;
+    border-radius: 18px;
+    border: 1px solid var(--border);
+    transition: 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+}
+
+.service-icon {
+    width: 62px;
+    height: 62px;
+    background: rgba(245,130,32,0.12);
+    color: var(--orange);
+    border-radius: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    margin-bottom: 22px;
+}
+
+.service-card h3 {
+    margin-bottom: 10px;
+}
+
+.service-card p {
+    color: var(--gray);
+    font-size: 14px;
+}
+
+
+/* =====================================================
+   HOW IT WORKS
+===================================================== */
+
+.how-it-works {
+    padding: 110px 0;
+}
+
+.steps {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.step {
+    text-align: center;
+    position: relative;
+}
+
+.step-number {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: var(--dark);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 22px;
+    font-size: 22px;
+    font-weight: 900;
+    border: 5px solid #eee;
+}
+
+.step h3 {
+    margin-bottom: 8px;
+}
+
+.step p {
+    color: var(--gray);
+    font-size: 14px;
+}
+
+
+/* =====================================================
+   WHY US
+===================================================== */
+
+.why-us {
+    padding: 110px 0;
+    background: var(--dark);
+    color: white;
+}
+
+.why-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 70px;
+    align-items: center;
+}
+
+.why-image {
+    height: 560px;
+    border-radius: 20px;
+    background:
+        url("https://images.unsplash.com/photo-1466611653911-95081537e5b7?auto=format&fit=crop&w=1200&q=85")
+        center/cover;
+}
+
+.why-content span {
+    color: var(--orange);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.why-content h2 {
+    font-size: clamp(35px, 5vw, 55px);
+    line-height: 1.05;
+    margin: 15px 0 20px;
+}
+
+.why-content > p {
+    color: #aeb3bb;
+    margin-bottom: 30px;
+}
+
+.why-list {
+    display: grid;
+    gap: 22px;
+}
+
+.why-item {
+    display: flex;
+    gap: 15px;
+}
+
+.why-item i {
+    color: var(--orange);
+    margin-top: 4px;
+}
+
+.why-item h4 {
+    margin-bottom: 3px;
+}
+
+.why-item p {
+    color: #8f959e;
+    font-size: 13px;
+}
+
+
+/* =====================================================
+   QUOTE CALCULATOR
+===================================================== */
+
+.quote {
+    padding: 110px 0;
+    background: var(--light);
+}
+
+.quote-box {
+    max-width: 850px;
+    margin: auto;
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 45px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.06);
+}
+
+.quote-form {
+    display: grid;
+    gap: 18px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 12px;
+    font-weight: 700;
+    margin-bottom: 7px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    outline: none;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: var(--orange);
+}
+
+.quote-result {
+    display: none;
+    margin-top: 25px;
+    padding: 20px;
+    background: #fff6ed;
+    border-left: 4px solid var(--orange);
+    border-radius: 8px;
+}
+
+
+/* =====================================================
+   REVIEWS
+===================================================== */
+
+.reviews {
+    padding: 110px 0;
+}
+
+.review-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.review-card {
+    padding: 30px;
+    background: var(--light);
+    border-radius: 16px;
+    border: 1px solid var(--border);
+}
+
+.stars {
+    color: #f5a623;
+    margin-bottom: 15px;
+}
+
+.review-card p {
+    color: #4b5563;
+    font-size: 14px;
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+.review-author {
+    font-weight: 800;
+    font-size: 14px;
+}
+
+.review-author small {
+    display: block;
+    color: var(--gray);
+    font-weight: 400;
+    margin-top: 3px;
+}
+
+
+/* =====================================================
+   ABOUT
+===================================================== */
+
+.about {
+    padding: 110px 0;
+    background: var(--light);
+}
+
+.about-inner {
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
+}
+
+.about-inner h2 {
+    font-size: clamp(35px, 5vw, 55px);
+    line-height: 1.05;
+    margin: 12px 0 20px;
+}
+
+.about-inner p {
+    color: var(--gray);
+    margin-bottom: 15px;
+}
+
+
+/* =====================================================
+   CTA
+===================================================== */
+
+.cta {
+    padding: 100px 0;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(245,130,32,0.95),
+            rgba(245,130,32,0.82)
+        ),
+        url("https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=1800&q=85")
+        center/cover;
+    color: white;
+    text-align: center;
+}
+
+.cta h2 {
+    font-size: clamp(35px, 6vw, 60px);
+    line-height: 1;
+    margin-bottom: 20px;
+}
+
+.cta p {
+    max-width: 600px;
+    margin: 0 auto 30px;
+}
+
+.cta .btn {
+    background: var(--dark);
+}
+
+
+/* =====================================================
+   CONTACT
+===================================================== */
+
+.contact {
+    padding: 110px 0;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 70px;
+}
+
+.contact-info span {
+    color: var(--orange);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.contact-info h2 {
+    font-size: clamp(35px, 5vw, 52px);
+    line-height: 1.05;
+    margin: 15px 0;
+}
+
+.contact-info > p {
+    color: var(--gray);
+    margin-bottom: 30px;
+}
+
+.contact-item {
+    display: flex;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.contact-item i {
+    color: var(--orange);
+    font-size: 20px;
+}
+
+.contact-item small {
+    display: block;
+    color: var(--gray);
+}
+
+.contact-form {
+    padding: 35px;
+    background: var(--light);
+    border-radius: 18px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    outline: none;
+}
+
+.contact-form textarea {
+    min-height: 130px;
+    resize: vertical;
+}
+
+.contact-form button {
+    width: 100%;
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer {
+    background: var(--dark);
+    color: white;
+    padding: 65px 0 25px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 50px;
+    margin-bottom: 50px;
+}
+
+.footer-brand p {
+    color: #888;
+    max-width: 400px;
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.footer-column h4 {
+    margin-bottom: 18px;
+}
+
+.footer-column a {
+    display: block;
+    color: #888;
+    font-size: 14px;
+    margin: 9px 0;
+}
+
+.footer-column a:hover {
+    color: var(--orange);
+}
+
+.socials {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.socials a {
+    width: 38px;
+    height: 38px;
+    border: 1px solid #333;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.socials a:hover {
+    background: var(--orange);
+    border-color: var(--orange);
+}
+
+.copyright {
+    border-top: 1px solid #242424;
+    padding-top: 25px;
+    text-align: center;
+    color: #666;
+    font-size: 12px;
+}
+
+
+/* =====================================================
+   WHATSAPP
+===================================================== */
+
+.whatsapp {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    width: 60px;
+    height: 60px;
+    background: #25D366;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 29px;
+    z-index: 999;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+    transition: 0.3s;
+}
+
+.whatsapp:hover {
+    transform: scale(1.1);
+}
+
+
+/* =====================================================
+   PRODUCT MODAL
+===================================================== */
+
+.modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.75);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 3000;
+    padding: 20px;
+}
+
+.modal.active {
+    display: flex;
+}
+
+.modal-box {
+    background: white;
+    max-width: 850px;
+    width: 100%;
+    border-radius: 18px;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: relative;
+    animation: modalIn 0.3s ease;
+}
+
+.modal-image {
+    min-height: 400px;
+}
+
+.modal-image img {
+    height: 100%;
+    object-fit: cover;
+}
+
+.modal-content {
+    padding: 40px;
+}
+
+.modal-content span {
+    color: var(--orange);
+    text-transform: uppercase;
+    font-size: 11px;
+    font-weight: 800;
+}
+
+.modal-content h2 {
+    font-size: 30px;
+    line-height: 1.1;
+    margin: 10px 0 15px;
+}
+
+.modal-content p {
+    color: var(--gray);
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+.modal-close {
+    position: absolute;
+    right: 15px;
+    top: 12px;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    border: none;
+    background: white;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+    font-size: 18px;
+    z-index: 2;
+}
+
+
+/* =====================================================
+   ANIMATIONS
+===================================================== */
+
+@keyframes fadeUp {
+
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+@keyframes modalIn {
+
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 950px) {
+
+    .nav-links {
+        position: fixed;
+        top: 78px;
+        left: -100%;
+        width: 100%;
+        background: white;
+        flex-direction: column;
+        align-items: stretch;
+        padding: 30px;
+        transition: 0.3s;
+        box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+    }
+
+    .nav-links.active {
+        left: 0;
+    }
+
+    .nav-links a {
+        display: block;
+        padding: 10px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .trust-grid {
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .product-grid,
+    .service-grid,
+    .review-grid {
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .featured-box,
+    .why-grid,
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .featured-content {
+        padding: 55px 35px;
+    }
+
+    .why-image {
+        height: 450px;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .modal-box {
+        grid-template-columns: 1fr;
+        max-height: 90vh;
+        overflow-y: auto;
+    }
+
+    .modal-image {
+        min-height: 250px;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .hero h1 {
+        letter-spacing: -2px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .hero-buttons .btn {
+        width: 100%;
+    }
+
+    .hero-stats {
+        gap: 25px;
+        flex-wrap: wrap;
+    }
+
+    .trust-grid,
+    .product-grid,
+    .service-grid,
+    .steps,
+    .review-grid,
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .quote-box {
+        padding: 25px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .why-image {
+        height: 350px;
+    }
+
+    .contact-form {
+        padding: 25px;
+    }
+
+    .whatsapp {
+        width: 54px;
+        height: 54px;
+        right: 18px;
+        bottom: 18px;
+    }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header>
+
+<div class="container">
+
+<nav class="navbar">
+
+<a href="#home" class="logo">
+
+<div class="logo-circle">
+<i class="fa-solid fa-sun"></i>
+</div>
+
+<div class="logo-name">
+DURA STRENGTH
+<small>NIGERIA</small>
+</div>
+
+</a>
+
+
+<ul class="nav-links" id="navLinks">
+
+<li>
+<a href="#home">Home</a>
+</li>
+
+<li>
+<a href="#products">Products</a>
+</li>
+
+<li>
+<a href="#services">Services</a>
+</li>
+
+<li>
+<a href="#about">About</a>
+</li>
+
+<li>
+<a href="#contact">Contact</a>
+</li>
+
+<li>
+<a href="#quote" class="nav-cta">
+Get a Quote
+</a>
+</li>
+
+</ul>
+
+
+<div class="menu-toggle" id="menuToggle">
+
+<i class="fa-solid fa-bars"></i>
+
+</div>
+
+</nav>
+
+</div>
+
+</header>
+
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section class="hero" id="home">
+
+<div class="container">
+
+<div class="hero-content">
+
+<div class="hero-label">
+
+<i class="fa-solid fa-sun"></i>
+
+Reliable Solar Energy Solutions
+
+</div>
+
+
+<h1>
+
+Go Solar.<br>
+
+<span>Save Cost.</span>
+
+</h1>
+
+
+<p>
+
+Power your home or business with reliable solar energy solutions.
+Discover quality solar products designed to give you dependable
+power while helping you save on energy costs.
+
+</p>
+
+
+<div class="hero-buttons">
+
+<a href="#products" class="btn btn-primary">
+
+Explore Products
+
+<i class="fa-solid fa-arrow-right"></i>
+
+</a>
+
+
+<a href="#quote" class="btn btn-outline">
+
+Request a Quote
+
+</a>
+
+</div>
+
+
+<div class="hero-stats">
+
+<div class="stat">
+
+<h3>500W+</h3>
+
+<p>Solar Solutions</p>
+
+</div>
+
+
+<div class="stat">
+
+<h3>1kWh</h3>
+
+<p>Power Storage</p>
+
+</div>
+
+
+<div class="stat">
+
+<h3>100%</h3>
+
+<p>Customer Focus</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     TRUST
+===================================================== -->
+
+<section class="trust-strip">
+
+<div class="container">
+
+<div class="trust-grid">
+
+
+<div class="trust-item">
+
+<i class="fa-solid fa-solar-panel"></i>
+
+<div>
+
+<h4>Quality Products</h4>
+
+<p>Reliable solar solutions</p>
+
+</div>
+
+</div>
+
+
+<div class="trust-item">
+
+<i class="fa-solid fa-truck-fast"></i>
+
+<div>
+
+<h4>Fast Delivery</h4>
+
+<p>Get your products quickly</p>
+
+</div>
+
+</div>
+
+
+<div class="trust-item">
+
+<i class="fa-solid fa-screwdriver-wrench"></i>
+
+<div>
+
+<h4>Expert Installation</h4>
+
+<p>Professional support</p>
+
+</div>
+
+</div>
+
+
+<div class="trust-item">
+
+<i class="fa-solid fa-headset"></i>
+
+<div>
+
+<h4>Customer Support</h4>
+
+<p>We're here to help</p>
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     PRODUCTS
+===================================================== -->
+
+<section class="products" id="products">
+
+<div class="container">
+
+
+<div class="section-heading">
+
+<span>Our Products</span>
+
+<h2>Power Your Life With Solar</h2>
+
+<p>
+Explore solar products and energy solutions designed
+for homes, businesses and everyday power needs.
+</p>
+
+</div>
+
+
+<div class="filter-buttons">
+
+<button class="filter-btn active" data-filter="all">
+All Products
+</button>
+
+<button class="filter-btn" data-filter="panel">
+Solar Panels
+</button>
+
+<button class="filter-btn" data-filter="inverter">
+Inverters
+</button>
+
+<button class="filter-btn" data-filter="battery">
+Batteries
+</button>
+
+<button class="filter-btn" data-filter="tank">
+Power Tanks
+</button>
+
+</div>
+
+
+<div class="product-grid">
+
+
+<!-- PRODUCT 1 -->
+
+<div class="product-card" data-category="panel">
+
+<div class="product-img">
+
+<span class="product-badge">
+Solar
+</span>
+
+<img
+src="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=900&q=85"
+alt="Solar Panels"
+>
+
+</div>
+
+<div class="product-content">
+
+<span class="product-category">
+Solar Panels
+</span>
+
+<h3>Solar Panel Systems</h3>
+
+<p>
+Reliable solar panels for homes, offices and businesses.
+</p>
+
+<div class="product-bottom">
+
+<span></span>
+
+<button
+class="view-product"
+data-product="Solar Panel Systems"
+data-category="Solar Panels"
+data-description="Reliable solar panel solutions designed to help homes and businesses generate clean and dependable energy."
+data-image="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=900&q=85"
+>
+View Details →
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<!-- PRODUCT 2 -->
+
+<div class="product-card" data-category="inverter">
+
+<div class="product-img">
+
+<span class="product-badge">
+Power
+</span>
+
+<img
+src="https://images.unsplash.com/photo-1559302504-64aae6ca6b6d?auto=format&fit=crop&w=900&q=85"
+alt="Solar Inverter"
+>
+
+</div>
+
+<div class="product-content">
+
+<span class="product-category">
+Inverters
+</span>
+
+<h3>Solar Inverters</h3>
+
+<p>
+Efficient inverter solutions for reliable power management.
+</p>
+
+<div class="product-bottom">
+
+<span></span>
+
+<button
+class="view-product"
+data-product="Solar Inverters"
+data-category="Inverters"
+data-description="Efficient inverter solutions designed to help manage and convert solar energy for reliable everyday power."
+data-image="https://images.unsplash.com/photo-1559302504-64aae6ca6b6d?auto=format&fit=crop&w=900&q=85"
+>
+View Details →
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<!-- PRODUCT 3 -->
+
+<div class="product-card" data-category="battery">
+
+<div class="product-img">
+
+<span class="product-badge">
+Storage
+</span>
+
+<img
+src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?auto=format&fit=crop&w=900&q=85"
+alt="Solar Battery"
+>
+
+</div>
+
+<div class="product-content">
+
+<span class="product-category">
+Batteries
+</span>
+
+<h3>Solar Batteries</h3>
+
+<p>
+Store solar energy and enjoy dependable power when needed.
+</p>
+
+<div class="product-bottom">
+
+<span></span>
+
+<button
+class="view-product"
+data-product="Solar Batteries"
+data-category="Batteries"
+data-description="Energy storage solutions designed to store solar power for use when you need it most."
+data-image="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?auto=format&fit=crop&w=900&q=85"
+>
+View Details →
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<!-- PRODUCT 4 -->
+
+<div class="product-card" data-category="tank">
+
+<div class="product-img">
+
+<span class="product-badge">
+Featured
+</span>
+
+<img
+src="https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?auto=format&fit=crop&w=900&q=85"
+alt="Solar Power Tank"
+>
+
+</div>
+
+<div class="product-content">
+
+<span class="product-category">
+Power Tank
+</span>
+
+<h3>500W / 1kWh Solar Power Tank</h3>
+
+<p>
+A compact solar energy solution for everyday power needs.
+</p>
+
+<div class="product-bottom">
+
+<span></span>
+
+<button
+class="view-product"
+data-product="500W / 1kWh Solar Power Tank"
+data-category="Power Tank"
+data-description="A compact solar power solution designed for convenient and reliable everyday energy needs."
+data-image="https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?auto=format&fit=crop&w=900&q=85"
+>
+View Details →
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<!-- PRODUCT 5 -->
+
+<div class="product-card" data-category="panel">
+
+<div class="product-img">
+
+<img
+src="https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?auto=format&fit=crop&w=900&q=85"
+alt="Home Solar System"
+>
+
+</div>
+
+<div class="product-content">
+
+<span class="product-category">
+Solar Solutions
+</span>
+
+<h3>Home Solar Systems</h3>
+
+<p>
+Solar solutions designed around your home's energy needs.
+</p>
+
+<div class="product-bottom">
+
+<span></span>
+
+<button
+class="view-product"
+data-product="Home Solar Systems"
+data-category="Solar Solutions"
+data-description="Complete solar energy solutions designed to help homes enjoy reliable and affordable power."
+data-image="https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?auto=format&fit=crop&w=900&q=85"
+>
+View Details →
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<!-- PRODUCT 6 -->
+
+<div class="product-card" data-category="inverter">
+
+<div class="product-img">
+
+<img
+src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=900&q=85"
+alt="Business Solar Solution"
+>
+
+</div>
+
+<div class="product-content">
+
+<span class="product-category">
+Business Solutions
+</span>
+
+<h3>Business Solar Solutions</h3>
+
+<p>
+Reliable energy solutions for offices, shops and businesses.
+</p>
+
+<div class="product-bottom">
+
+<span></span>
+
+<button
+class="view-product"
+data-product="Business Solar Solutions"
+data-category="Business Solar"
+data-description="Solar solutions designed to help businesses reduce energy costs and enjoy more reliable power."
+data-image="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=900&q=85"
+>
+View Details →
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FEATURED PRODUCT
+===================================================== -->
+
+<section class="featured">
+
+<div class="container">
+
+<div class="featured-box">
+
+<div class="featured-image"></div>
+
+
+<div class="featured-content">
+
+<span>Featured Product</span>
+
+<h2>
+500W / 1kWh
+Solar Power Tank
+</h2>
+
+<p>
+Experience reliable solar power designed to keep your
+essential devices running while helping you reduce
+your dependence on traditional electricity sources.
+</p>
+
+
+<ul class="feature-list">
+
+<li>
+<i class="fa-solid fa-circle-check"></i>
+Compact and convenient
+</li>
+
+<li>
+<i class="fa-solid fa-circle-check"></i>
+Reliable energy storage
+</li>
+
+<li>
+<i class="fa-solid fa-circle-check"></i>
+Ideal for everyday power needs
+</li>
+
+</ul>
+
+
+<a href="#quote" class="btn btn-primary">
+
+Enquire About This Product
+
+<i class="fa-solid fa-arrow-right"></i>
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     SERVICES
+===================================================== -->
+
+<section class="services" id="services">
+
+<div class="container">
+
+
+<div class="section-heading">
+
+<span>What We Do</span>
+
+<h2>Complete Solar Solutions</h2>
+
+<p>
+From quality solar products to installation support,
+we help customers move toward reliable energy.
+</p>
+
+</div>
+
+
+<div class="service-grid">
+
+
+<div class="service-card">
+
+<div class="service-icon">
+
+<i class="fa-solid fa-solar-panel"></i>
+
+</div>
+
+<h3>Solar Product Sales</h3>
+
+<p>
+Explore quality solar panels, inverters, batteries
+and other energy solutions.
+</p>
+
+</div>
+
+
+<div class="service-card">
+
+<div class="service-icon">
+
+<i class="fa-solid fa-screwdriver-wrench"></i>
+
+</div>
+
+<h3>Solar Installation</h3>
+
+<p>
+Get professional support for setting up your solar
+energy system.
+</p>
+
+</div>
+
+
+<div class="service-card">
+
+<div class="service-icon">
+
+<i class="fa-solid fa-lightbulb"></i>
+
+</div>
+
+<h3>Solar Consultation</h3>
+
+<p>
+Get guidance on selecting the right solar solution
+for your energy needs.
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     HOW IT WORKS
+===================================================== -->
+
+<section class="how-it-works">
+
+<div class="container">
+
+
+<div class="section-heading">
+
+<span>Simple Process</span>
+
+<h2>Going Solar Is Easy</h2>
+
+<p>
+Our simple process helps you take the next step
+toward reliable solar power.
+</p>
+
+</div>
+
+
+<div class="steps">
+
+
+<div class="step">
+
+<div class="step-number">
+01
+</div>
+
+<h3>Tell Us Your Needs</h3>
+
+<p>
+Tell us about your home, business and power requirements.
+</p>
+
+</div>
+
+
+<div class="step">
+
+<div class="step-number">
+02
+</div>
+
+<h3>Get the Right Solution</h3>
+
+<p>
+We'll help you identify a suitable solar solution
+for your needs.
+</p>
+
+</div>
+
+
+<div class="step">
+
+<div class="step-number">
+03
+</div>
+
+<h3>Enjoy Reliable Power</h3>
+
+<p>
+Get your solar solution and take a step toward
+more dependable energy.
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     WHY US
+===================================================== -->
+
+<section class="why-us">
+
+<div class="container">
+
+<div class="why-grid">
+
+
+<div class="why-image"></div>
+
+
+<div class="why-content">
+
+<span>WHY DURA STRENGTH</span>
+
+<h2>
+Reliable Power.
+Smarter Energy.
+</h2>
+
+<p>
+We believe access to reliable energy should not be
+complicated or unnecessarily expensive. Our goal is
+to provide quality solar solutions that help customers
+enjoy dependable power while reducing energy costs.
+</p>
+
+
+<div class="why-list">
+
+
+<div class="why-item">
+
+<i class="fa-solid fa-circle-check"></i>
+
+<div>
+
+<h4>Quality Solar Products</h4>
+
+<p>
+Reliable products selected to meet your energy needs.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="why-item">
+
+<i class="fa-solid fa-circle-check"></i>
+
+<div>
+
+<h4>Affordable Solutions</h4>
+
+<p>
+Solar solutions designed around your needs and budget.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="why-item">
+
+<i class="fa-solid fa-circle-check"></i>
+
+<div>
+
+<h4>Excellent Customer Service</h4>
+
+<p>
+Responsive and helpful support for our customers.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="why-item">
+
+<i class="fa-solid fa-circle-check"></i>
+
+<div>
+
+<h4>Fast Delivery</h4>
+
+<p>
+We work to get your products to you as quickly as possible.
+</p>
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     QUOTE CALCULATOR
+===================================================== -->
+
+<section class="quote" id="quote">
+
+<div class="container">
+
+
+<div class="section-heading">
+
+<span>Get Started</span>
+
+<h2>Request a Solar Quote</h2>
+
+<p>
+Tell us a little about your needs and we'll help
+you find a suitable solar solution.
+</p>
+
+</div>
+
+
+<div class="quote-box">
+
+<form class="quote-form" id="quoteForm">
+
+
+<div class="form-row">
+
+
+<div class="form-group">
+
+<label>Your Name</label>
+
+<input
+type="text"
+id="quoteName"
+placeholder="Enter your name"
+required
+>
+
+</div>
+
+
+<div class="form-group">
+
+<label>Phone Number</label>
+
+<input
+type="tel"
+id="quotePhone"
+placeholder="08012345678"
+required
+>
+
+</div>
+
+
+</div>
+
+
+<div class="form-row">
+
+
+<div class="form-group">
+
+<label>Property Type</label>
+
+<select id="propertyType">
+
+<option>Residential Home</option>
+
+<option>Office</option>
+
+<option>Shop</option>
+
+<option>Business</option>
+
+</select>
+
+</div>
+
+
+<div class="form-group">
+
+<label>What do you need?</label>
+
+<select id="solarNeed">
+
+<option>Solar Panels</option>
+
+<option>Inverter</option>
+
+<option>Solar Battery</option>
+
+<option>Solar Power Tank</option>
+
+<option>Complete Solar System</option>
+
+</select>
+
+</div>
+
+
+</div>
+
+
+<div class="form-group">
+
+<label>Tell us more</label>
+
+<textarea
+id="quoteMessage"
+placeholder="Describe your power needs..."
+></textarea>
+
+</div>
+
+
+<button class="btn btn-primary" type="submit">
+
+Request Quote
+
+<i class="fa-solid fa-arrow-right"></i>
+
+</button>
+
+
+</form>
+
+
+<div class="quote-result" id="quoteResult"></div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     REVIEWS
+===================================================== -->
+
+<section class="reviews">
+
+<div class="container">
+
+
+<div class="section-heading">
+
+<span>Customer Feedback</span>
+
+<h2>What Our Customers Say</h2>
+
+<p>
+We're committed to providing quality products
+and excellent customer service.
+</p>
+
+</div>
+
+
+<div class="review-grid">
+
+
+<div class="review-card">
+
+<div class="stars">
+★★★★★
+</div>
+
+<p>
+"Everything is nice. Your customer service
+is top-notch! Fast response."
+</p>
+
+<div class="review-author">
+
+Happy Customer
+
+<small>Verified Client</small>
+
+</div>
+
+</div>
+
+
+<div class="review-card">
+
+<div class="stars">
+★★★★★
+</div>
+
+<p>
+"You really delivered as promised.
+Affordable and reliable."
+</p>
+
+<div class="review-author">
+
+Happy Customer
+
+<small>Verified Client</small>
+
+</div>
+
+</div>
+
+
+<div class="review-card">
+
+<div class="stars">
+★★★★★
+</div>
+
+<p>
+"Our new solar setup is incredible!
+The team was amazing."
+</p>
+
+<div class="review-author">
+
+Happy Customer
+
+<small>Verified Client</small>
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     ABOUT
+===================================================== -->
+
+<section class="about" id="about">
+
+<div class="container">
+
+<div class="about-inner">
+
+<span style="color:var(--orange);font-weight:800;letter-spacing:2px;font-size:12px;">
+ABOUT DURA STRENGTH
+</span>
+
+<h2>
+Go Solar. Save Cost.
+</h2>
+
+<p>
+Dura Strength Nigeria is focused on providing reliable
+and affordable solar energy solutions for homes and businesses.
+</p>
+
+<p>
+From solar products and energy storage to installation support,
+we're helping customers take a step toward dependable power
+and smarter energy management.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     CTA
+===================================================== -->
+
+<section class="cta">
+
+<div class="container">
+
+<h2>
+Ready to Go Solar?
+</h2>
+
+<p>
+Take the first step toward reliable and affordable energy.
+Talk to us about the right solar solution for your needs.
+</p>
+
+<a href="#quote" class="btn">
+
+Talk to Us
+
+<i class="fa-solid fa-arrow-right"></i>
+
+</a>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     CONTACT
+===================================================== -->
+
+<section class="contact" id="contact">
+
+<div class="container">
+
+<div class="contact-grid">
+
+
+<div class="contact-info">
+
+<span>GET IN TOUCH</span>
+
+<h2>
+Let's Talk About
+Your Solar Needs.
+</h2>
+
+<p>
+Interested in solar power? Send us a message and
+we'll help you find the right solution.
+</p>
+
+
+<div class="contact-item">
+
+<i class="fa-solid fa-phone"></i>
+
+<div>
+
+<strong>Phone</strong>
+
+<small>Contact us for enquiries</small>
+
+</div>
+
+</div>
+
+
+<div class="contact-item">
+
+<i class="fa-solid fa-location-dot"></i>
+
+<div>
+
+<strong>Location</strong>
+
+<small>Nigeria</small>
+
+</div>
+
+</div>
+
+
+<div class="contact-item">
+
+<i class="fa-solid fa-clock"></i>
+
+<div>
+
+<strong>Business Hours</strong>
+
+<small>Monday – Saturday</small>
+
+</div>
+
+</div>
+
+
+</div>
+
+
+<form class="contact-form" id="contactForm">
+
+
+<input
+type="text"
+placeholder="Your Name"
+required
+>
+
+
+<input
+type="email"
+placeholder="Email Address"
+required
+>
+
+
+<input
+type="tel"
+placeholder="Phone Number"
+required
+>
+
+
+<textarea
+placeholder="Tell us what you need..."
+required
+></textarea>
+
+
+<button class="btn btn-primary">
+
+Send Enquiry
+
+<i class="fa-solid fa-paper-plane"></i>
+
+</button>
+
+
+</form>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+<div class="container">
+
+<div class="footer-grid">
+
+
+<div class="footer-brand">
+
+<div class="logo">
+
+<div class="logo-circle">
+
+<i class="fa-solid fa-sun"></i>
+
+</div>
+
+<div class="logo-name">
+
+DURA STRENGTH
+
+<small style="color:#777;">
+NIGERIA
+</small>
+
+</div>
+
+</div>
+
+
+<p>
+Reliable solar energy solutions for homes and businesses.
+Go solar, save cost.
+</p>
+
+
+<div class="socials">
+
+<a href="#">
+<i class="fa-brands fa-instagram"></i>
+</a>
+
+<a href="#">
+<i class="fa-brands fa-facebook"></i>
+</a>
+
+<a href="#">
+<i class="fa-brands fa-tiktok"></i>
+</a>
+
+<a href="#">
+<i class="fa-brands fa-x-twitter"></i>
+</a>
+
+</div>
+
+</div>
+
+
+<div class="footer-column">
+
+<h4>Quick Links</h4>
+
+<a href="#home">Home</a>
+
+<a href="#products">Products</a>
+
+<a href="#services">Services</a>
+
+<a href="#about">About</a>
+
+<a href="#contact">Contact</a>
+
+</div>
+
+
+<div class="footer-column">
+
+<h4>Products</h4>
+
+<a href="#products">Solar Panels</a>
+
+<a href="#products">Inverters</a>
+
+<a href="#products">Batteries</a>
+
+<a href="#products">Power Tanks</a>
+
+</div>
+
+
+</div>
+
+
+<div class="copyright">
+
+© 2026 Dura Strength Nigeria. All rights reserved.
+
+</div>
+
+</div>
+
+</footer>
+
+
+
+<!-- =====================================================
+     PRODUCT MODAL
+===================================================== -->
+
+<div class="modal" id="productModal">
+
+<div class="modal-box">
+
+
+<button class="modal-close" id="modalClose">
+
+<i class="fa-solid fa-xmark"></i>
+
+</button>
+
+
+<div class="modal-image">
+
+<img id="modalImage" src="" alt="Product">
+
+</div>
+
+
+<div class="modal-content">
+
+<span id="modalCategory">
+Product
+</span>
+
+<h2 id="modalTitle">
+Product Name
+</h2>
+
+<p id="modalDescription">
+Product description.
+</p>
+
+
+<button class="btn btn-primary" id="modalWhatsapp">
+
+Enquire on WhatsApp
+
+<i class="fa-brands fa-whatsapp"></i>
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<!-- =====================================================
+     FLOATING WHATSAPP
+===================================================== -->
+
+<a
+href="#"
+class="whatsapp"
+id="whatsappButton"
+title="Chat on WhatsApp"
+>
+
+<i class="fa-brands fa-whatsapp"></i>
+
+</a>
+
+
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
+<script>
+
+
+/* =====================================================
+   SETTINGS
+===================================================== */
+
+/*
+   IMPORTANT:
+   Replace this number later with the real WhatsApp number.
+
+   Format:
+   Nigeria number 08012345678
+   becomes:
+   2348012345678
+
+   DO NOT include + or spaces.
+*/
+
+const WHATSAPP_NUMBER = "2340000000000";
+
+
+
+/* =====================================================
+   MOBILE MENU
+===================================================== */
+
+const menuToggle =
+document.getElementById("menuToggle");
+
+const navLinks =
+document.getElementById("navLinks");
+
+
+menuToggle.addEventListener("click", () => {
+
+navLinks.classList.toggle("active");
+
+});
+
+
+document
+.querySelectorAll(".nav-links a")
+.forEach(link => {
+
+link.addEventListener("click", () => {
+
+navLinks.classList.remove("active");
+
+});
+
+});
+
+
+
+/* =====================================================
+   PRODUCT FILTER
+===================================================== */
+
+const filterButtons =
+document.querySelectorAll(".filter-btn");
+
+const productCards =
+document.querySelectorAll(".product-card");
+
+
+filterButtons.forEach(button => {
+
+button.addEventListener("click", () => {
+
+
+filterButtons.forEach(btn => {
+
+btn.classList.remove("active");
+
+});
+
+
+button.classList.add("active");
+
+
+const filter =
+button.getAttribute("data-filter");
+
+
+productCards.forEach(card => {
+
+
+const category =
+card.getAttribute("data-category");
+
+
+if (
+filter === "all" ||
+filter === category
+) {
+
+card.style.display = "block";
+
+} else {
+
+card.style.display = "none";
+
+}
+
+});
+
+
+});
+
+});
+
+
+
+/* =====================================================
+   PRODUCT MODAL
+===================================================== */
+
+const modal =
+document.getElementById("productModal");
+
+const modalClose =
+document.getElementById("modalClose");
+
+const modalTitle =
+document.getElementById("modalTitle");
+
+const modalCategory =
+document.getElementById("modalCategory");
+
+const modalDescription =
+document.getElementById("modalDescription");
+
+const modalImage =
+document.getElementById("modalImage");
+
+const modalWhatsapp =
+document.getElementById("modalWhatsapp");
+
+
+let selectedProduct = "";
+
+
+document
+.querySelectorAll(".view-product")
+.forEach(button => {
+
+
+button.addEventListener("click", () => {
+
+
+selectedProduct =
+button.dataset.product;
+
+
+modalTitle.textContent =
+button.dataset.product;
+
+
+modalCategory.textContent =
+button.dataset.category;
+
+
+modalDescription.textContent =
+button.dataset.description;
+
+
+modalImage.src =
+button.dataset.image;
+
+
+modal.classList.add("active");
+
+
+});
+
+});
+
+
+
+modalClose.addEventListener("click", () => {
+
+modal.classList.remove("active");
+
+});
+
+
+modal.addEventListener("click", (event) => {
+
+if (event.target === modal) {
+
+modal.classList.remove("active");
+
+}
+
+});
+
+
+
+/* =====================================================
+   PRODUCT WHATSAPP
+===================================================== */
+
+modalWhatsapp.addEventListener("click", () => {
+
+
+const message =
+
+`Hello Dura Strength Nigeria,
+
+I am interested in the ${selectedProduct}.
+
+Please I would like to know more about the product, price and availability.`;
+
+
+const url =
+
+`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+
+
+window.open(url, "_blank");
+
+
+});
+
+
+
+/* =====================================================
+   FLOATING WHATSAPP
+===================================================== */
+
+document
+.getElementById("whatsappButton")
+.addEventListener("click", (event) => {
+
+
+event.preventDefault();
+
+
+const message =
+
+"Hello Dura Strength Nigeria, I would like to enquire about your solar products and solutions.";
+
+
+const url =
+
+`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+
+
+window.open(url, "_blank");
+
+
+});
+
+
+
+/* =====================================================
+   QUOTE FORM
+===================================================== */
+
+const quoteForm =
+document.getElementById("quoteForm");
+
+const quoteResult =
+document.getElementById("quoteResult");
+
+
+quoteForm.addEventListener("submit", (event) => {
+
+
+event.preventDefault();
+
+
+const name =
+document.getElementById("quoteName").value;
+
+
+const phone =
+document.getElementById("quotePhone").value;
+
+
+const property =
+document.getElementById("propertyType").value;
+
+
+const need =
+document.getElementById("solarNeed").value;
+
+
+const message =
+document.getElementById("quoteMessage").value;
+
+
+const whatsappMessage =
+
+`Hello Dura Strength Nigeria,
+
+My name is ${name}.
+
+I am interested in getting a solar quote.
+
+Property Type: ${property}
+
+I need: ${need}
+
+My phone number: ${phone}
+
+Additional Information:
+${message}`;
+
+
+const whatsappUrl =
+
+`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(whatsappMessage)}`;
+
+
+quoteResult.style.display = "block";
+
+
+quoteResult.innerHTML = `
+
+<strong>Almost there! ☀️</strong>
+
+<p style="margin-top:8px;color:#666;">
+
+Click below to send your request directly to our team on WhatsApp.
+
+</p>
+
+<br>
+
+<a
+href="${whatsappUrl}"
+target="_blank"
+class="btn btn-primary"
+>
+
+Send Request on WhatsApp
+
+<i class="fa-brands fa-whatsapp"></i>
+
+</a>
+
+`;
+
+
+});
+
+
+
+/* =====================================================
+   CONTACT FORM
+===================================================== */
+
+const contactForm =
+document.getElementById("contactForm");
+
+
+contactForm.addEventListener("submit", (event) => {
+
+
+event.preventDefault();
+
+
+alert(
+
+"Thank you for contacting Dura Strength Nigeria! " +
+
+"Your enquiry has been received."
+
+);
+
+
+contactForm.reset();
+
+
+});
+
+
+</script>
+
+
+</body>
+</html>
