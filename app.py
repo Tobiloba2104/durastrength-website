@@ -9,7 +9,7 @@ app = Flask(__name__)
 # SETTINGS
 # ==========================================
 
-app.secret_key = "durastrength-secret-key-change-this"
+app.secret_key = os.environ.get("SECRET_KEY", "dev-key-change-in-production")
 
 DATABASE = "quotes.db"
 
@@ -24,14 +24,15 @@ ALLOWED_EXTENSIONS = {
 
 app.config["UPLOAD_FOLDER"] = UPLOAD_FOLDER
 
+init_db()
 
 # ==========================================
 # ADMIN LOGIN DETAILS
 # ==========================================
 
-ADMIN_USERNAME = "admin"
+ADMIN_USERNAME = os.environ.get("ADMIN_USERNAME", "admin")
+ADMIN_PASSWORD = os.environ.get("ADMIN_PASSWORD", "dura123")
 
-ADMIN_PASSWORD = "dura123"
 
 
 # ==========================================
@@ -1027,9 +1028,8 @@ def admin_logout():
 # ==========================================
 
 if __name__ == "__main__":
-
-    init_db()
+    debug_mode = os.environ.get("FLASK_DEBUG", "False") == "True"
 
     app.run(
-        debug=True
+        debug=debug_mode
     )
