@@ -1,19 +1,10 @@
-// ===============================
-// DURASTRENGTH WEBSITE JAVASCRIPT
-// ===============================
 
 
-// BUSINESS WHATSAPP NUMBER
 const WHATSAPP_NUMBER = "2349032874636";
 
 
-// CART
 let cart = [];
 
-
-// ===============================
-// MOBILE MENU
-// ===============================
 
 function toggleMenu() {
 
@@ -23,10 +14,6 @@ function toggleMenu() {
 
 }
 
-
-// ===============================
-// ADD PRODUCT TO CART
-// ===============================
 
 function addToCart(name, price) {
 
@@ -62,10 +49,6 @@ function addToCart(name, price) {
 
 }
 
-
-// ===============================
-// UPDATE CART
-// ===============================
 
 function updateCart() {
 
@@ -171,10 +154,6 @@ function updateCart() {
 }
 
 
-// ===============================
-// CHANGE QUANTITY
-// ===============================
-
 function changeQuantity(index, amount) {
 
     cart[index].quantity += amount;
@@ -192,10 +171,6 @@ function changeQuantity(index, amount) {
 }
 
 
-// ===============================
-// REMOVE FROM CART
-// ===============================
-
 function removeFromCart(index) {
 
     cart.splice(index, 1);
@@ -204,10 +179,6 @@ function removeFromCart(index) {
 
 }
 
-
-// ===============================
-// OPEN CART
-// ===============================
 
 function openCart() {
 
@@ -227,10 +198,6 @@ function openCart() {
 }
 
 
-// ===============================
-// CLOSE CART
-// ===============================
-
 function closeCart() {
 
     document
@@ -248,10 +215,6 @@ function closeCart() {
 
 }
 
-
-// ===============================
-// CHECKOUT CART VIA WHATSAPP
-// ===============================
 
 function checkoutCart() {
 
@@ -324,10 +287,6 @@ function checkoutCart() {
 }
 
 
-// ===============================
-// REQUEST QUOTE FOR PRODUCT
-// ===============================
-
 function requestQuote(productName) {
 
     const message =
@@ -348,10 +307,6 @@ function requestQuote(productName) {
 
 }
 
-
-// ===============================
-// SEARCH PRODUCTS
-// ===============================
 
 function searchProducts() {
 
@@ -399,10 +354,6 @@ function searchProducts() {
 }
 
 
-// ===============================
-// FILTER PRODUCTS
-// ===============================
-
 function filterProducts(category, button) {
 
     const products =
@@ -447,10 +398,6 @@ function filterProducts(category, button) {
 
 }
 
-
-// ===============================
-// QUOTE FORM
-// ===============================
 
 function submitQuote(event) {
 
@@ -516,21 +463,13 @@ function submitQuote(event) {
     window.open(whatsappURL, "_blank");
 
 }// ===============================
-// DURASTRENGTH WEBSITE JAVASCRIPT
-// ===============================
 
 
-// BUSINESS WHATSAPP NUMBER
 const WHATSAPP_NUMBER = "2349032874636";
 
 
-// CART
 let cart = [];
 
-
-// ===============================
-// MOBILE MENU
-// ===============================
 
 function toggleMenu() {
 
@@ -540,10 +479,6 @@ function toggleMenu() {
 
 }
 
-
-// ===============================
-// ADD PRODUCT TO CART
-// ===============================
 
 function addToCart(name, price) {
 
@@ -579,10 +514,6 @@ function addToCart(name, price) {
 
 }
 
-
-// ===============================
-// UPDATE CART
-// ===============================
 
 function updateCart() {
 
@@ -688,10 +619,6 @@ function updateCart() {
 }
 
 
-// ===============================
-// CHANGE QUANTITY
-// ===============================
-
 function changeQuantity(index, amount) {
 
     cart[index].quantity += amount;
@@ -709,10 +636,6 @@ function changeQuantity(index, amount) {
 }
 
 
-// ===============================
-// REMOVE FROM CART
-// ===============================
-
 function removeFromCart(index) {
 
     cart.splice(index, 1);
@@ -721,10 +644,6 @@ function removeFromCart(index) {
 
 }
 
-
-// ===============================
-// OPEN CART
-// ===============================
 
 function openCart() {
 
@@ -744,10 +663,6 @@ function openCart() {
 }
 
 
-// ===============================
-// CLOSE CART
-// ===============================
-
 function closeCart() {
 
     document
@@ -765,10 +680,6 @@ function closeCart() {
 
 }
 
-
-// ===============================
-// CHECKOUT CART VIA WHATSAPP
-// ===============================
 
 function checkoutCart() {
 
@@ -841,10 +752,6 @@ function checkoutCart() {
 }
 
 
-// ===============================
-// REQUEST QUOTE FOR PRODUCT
-// ===============================
-
 function requestQuote(productName) {
 
     const message =
@@ -865,10 +772,6 @@ function requestQuote(productName) {
 
 }
 
-
-// ===============================
-// SEARCH PRODUCTS
-// ===============================
 
 function searchProducts() {
 
@@ -916,10 +819,6 @@ function searchProducts() {
 }
 
 
-// ===============================
-// FILTER PRODUCTS
-// ===============================
-
 function filterProducts(category, button) {
 
     const products =
@@ -964,10 +863,6 @@ function filterProducts(category, button) {
 
 }
 
-
-// ===============================
-// QUOTE FORM
-// ===============================
 
 function submitQuote(event) {
 
@@ -1033,9 +928,6 @@ function submitQuote(event) {
     window.open(whatsappURL, "_blank");
 
 }
-// ==========================================
-// PRODUCT DETAILS MODAL
-// ==========================================
 
 const productModal =
     document.getElementById("productModal");
@@ -1118,8 +1010,6 @@ viewProductButtons.forEach(button => {
 
 });
 
-
-// CLOSE MODAL
 
 function closeModal() {
 

@@ -5,9 +5,6 @@ from werkzeug.utils import secure_filename
 
 app = Flask(__name__)
 
-# ==========================================
-# SETTINGS
-# ==========================================
 
 app.secret_key = os.environ.get("SECRET_KEY", "dev-key-change-in-production")
 
@@ -24,34 +21,18 @@ ALLOWED_EXTENSIONS = {
 
 app.config["UPLOAD_FOLDER"] = UPLOAD_FOLDER
 
-init_db()
-
-# ==========================================
-# ADMIN LOGIN DETAILS
-# ==========================================
-
 ADMIN_USERNAME = os.environ.get("ADMIN_USERNAME", "admin")
 ADMIN_PASSWORD = os.environ.get("ADMIN_PASSWORD", "dura123")
 
 
-
-# ==========================================
-# CREATE DATABASE / TABLES
-# ==========================================
-
 def init_db():
 
-    # Make sure image folder exists
     os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 
     conn = sqlite3.connect(DATABASE)
 
     cursor = conn.cursor()
 
-
-    # ==========================================
-    # QUOTES TABLE
-    # ==========================================
 
     cursor.execute("""
         CREATE TABLE IF NOT EXISTS quotes (
@@ -75,10 +56,6 @@ def init_db():
     """)
 
 
-    # ==========================================
-    # PRODUCTS TABLE
-    # ==========================================
-
     cursor.execute("""
         CREATE TABLE IF NOT EXISTS products (
 
@@ -97,11 +74,6 @@ def init_db():
         )
     """)
 
-
-    # ==========================================
-    # CHECK OLD PRODUCTS TABLE
-    # AND ADD MISSING COLUMNS
-    # ==========================================
 
     cursor.execute(
         "PRAGMA table_info(products)"
@@ -145,10 +117,6 @@ def init_db():
         """)
 
 
-    # ==========================================
-    # CHECK OLD QUOTES TABLE
-    # ==========================================
-
     cursor.execute(
         "PRAGMA table_info(quotes)"
     )
@@ -166,11 +134,6 @@ def init_db():
             ADD COLUMN created_at TIMESTAMP
         """)
 
-
-    # ==========================================
-    # ADD YOUR ORIGINAL PRODUCTS
-    # ONLY IF DATABASE IS EMPTY
-    # ==========================================
 
     cursor.execute("""
         SELECT COUNT(*)
@@ -247,9 +210,9 @@ def init_db():
 
     conn.close()
 
-# ==========================================
-# CHECK IMAGE FILE TYPE
-# ==========================================
+
+init_db()
+
 
 def allowed_file(filename):
 
@@ -269,10 +232,6 @@ def allowed_file(filename):
     )
 
 
-# ==========================================
-# HOME PAGE
-# ==========================================
-
 @app.route("/")
 def home():
 
@@ -284,8 +243,6 @@ def home():
 
     cursor = conn.cursor()
 
-
-    # Get all products
 
     cursor.execute("""
         SELECT *
@@ -307,10 +264,6 @@ def home():
 
     )
 
-
-# ==========================================
-# SUBMIT CUSTOMER QUOTE
-# ==========================================
 
 @app.route(
     "/submit-quote",
@@ -382,10 +335,6 @@ def submit_quote():
     return "success"
 
 
-# ==========================================
-# ADMIN LOGIN
-# ==========================================
-
 @app.route(
     "/admin-login",
     methods=["GET", "POST"]
@@ -437,14 +386,9 @@ def admin_login():
     )
 
 
-# ==========================================
-# ADMIN DASHBOARD
-# ==========================================
-
 @app.route("/admin")
 def admin():
 
-    # Protect dashboard
 
     if not session.get(
         "admin_logged_in"
@@ -464,10 +408,6 @@ def admin():
     cursor = conn.cursor()
 
 
-    # ==========================================
-    # GET QUOTES
-    # ==========================================
-
     cursor.execute("""
         SELECT *
 
@@ -479,10 +419,6 @@ def admin():
     quotes = cursor.fetchall()
 
 
-    # ==========================================
-    # GET PRODUCTS
-    # ==========================================
-
     cursor.execute("""
         SELECT *
 
@@ -493,10 +429,6 @@ def admin():
 
     products = cursor.fetchall()
 
-
-    # ==========================================
-    # DASHBOARD STATISTICS
-    # ==========================================
 
     cursor.execute("""
         SELECT COUNT(*)
@@ -532,10 +464,6 @@ def admin():
     )
 
 
-# ==========================================
-# ADD PRODUCT
-# ==========================================
-
 @app.route(
     "/add-product",
     methods=["POST"]
@@ -550,8 +478,6 @@ def add_product():
             "/admin-login"
         )
 
-
-    # Get product details
 
     name = request.form.get(
         "name"
@@ -570,8 +496,6 @@ def add_product():
     )
 
 
-    # Get uploaded image
-
     image = request.files.get(
         "image"
     )
@@ -579,8 +503,6 @@ def add_product():
 
     filename = ""
 
-
-    # Save image
 
     if (
 
@@ -615,8 +537,6 @@ def add_product():
 
             )
 
-
-    # Save product to database
 
     conn = sqlite3.connect(
         DATABASE
@@ -663,10 +583,6 @@ def add_product():
     )
 
 
-# ==========================================
-# EDIT PRODUCT
-# ==========================================
-
 @app.route(
     "/edit-product/<int:product_id>",
     methods=["GET", "POST"]
@@ -693,10 +609,6 @@ def edit_product(
     cursor = conn.cursor()
 
 
-    # ==========================================
-    # POST = SAVE EDIT
-    # ==========================================
-
     if request.method == "POST":
 
         name = request.form.get(
@@ -720,8 +632,6 @@ def edit_product(
             "image"
         )
 
-
-        # Get existing product
 
         cursor.execute("""
             SELECT *
@@ -747,12 +657,8 @@ def edit_product(
             return "Product not found"
 
 
-        # Keep old image
-
         filename = product["image"]
 
-
-        # If new image uploaded
 
         if (
 
@@ -790,9 +696,7 @@ def edit_product(
                 )
 
 
-                # Delete old image
-
-                if filename:
+                if filename and filename != new_filename:
 
                     old_image = os.path.join(
 
@@ -816,8 +720,6 @@ def edit_product(
 
                 filename = new_filename
 
-
-        # Update product
 
         cursor.execute("""
 
@@ -864,10 +766,6 @@ def edit_product(
         )
 
 
-    # ==========================================
-    # GET = SHOW EDIT PAGE
-    # ==========================================
-
     cursor.execute("""
         SELECT *
 
@@ -902,10 +800,6 @@ def edit_product(
     )
 
 
-# ==========================================
-# DELETE PRODUCT
-# ==========================================
-
 @app.route(
     "/delete-product/<int:product_id>"
 )
@@ -929,8 +823,6 @@ def delete_product(
     cursor = conn.cursor()
 
 
-    # Get image first
-
     cursor.execute("""
 
         SELECT image
@@ -948,8 +840,6 @@ def delete_product(
 
     product = cursor.fetchone()
 
-
-    # Delete image from folder
 
     if (
 
@@ -981,8 +871,6 @@ def delete_product(
             )
 
 
-    # Delete database record
-
     cursor.execute("""
 
         DELETE FROM products
@@ -1006,10 +894,6 @@ def delete_product(
     )
 
 
-# ==========================================
-# LOGOUT
-# ==========================================
-
 @app.route(
     "/admin-logout"
 )
@@ -1022,10 +906,6 @@ def admin_logout():
         "/admin-login"
     )
 
-
-# ==========================================
-# START APPLICATION
-# ==========================================
 
 if __name__ == "__main__":
     debug_mode = os.environ.get("FLASK_DEBUG", "False") == "True"
