@@ -117,6 +117,9 @@ The application uses SQLite to store product information and customer quotation 
 
 The database tables are initialized automatically when the application starts. The application also inserts an initial set of products when the products table is empty.
 
+Screenshots Of Website
+images/screenshot.png
+
  Project Objective
 
 This project was developed to provide a practical digital platform for a solar energy business.
